@@ -31,6 +31,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*
+      Cand se deschidea tastatura aveam eroare "Bottom overflowed by..." si am ajuns la resizeToAvoidBottomInset
+      Nu stiu daca e cea mai corecta si eleganta metoda de rezolvare.
+      Eventual, astept o parere.
+       */
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Center(
