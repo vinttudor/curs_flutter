@@ -35,8 +35,11 @@ class _HomePageState extends State<HomePage> {
       Cand se deschidea tastatura aveam eroare "Bottom overflowed by..." si am ajuns la resizeToAvoidBottomInset
       Nu stiu daca e cea mai corecta si eleganta metoda de rezolvare.
       Eventual, astept o parere.
+
+      Daaaaar, intre timp am aflat din cursul 3 ca daca folosesc in loc de Column, ListView si ii pun EdgeInsetsDirectional rezolv problema :)
        */
-      resizeToAvoidBottomInset: false,
+      //resizeToAvoidBottomInset: false,
+
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -45,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Image.network(
               'https://store-images.s-microsoft.com/image/apps.23742.13816767389916056.fa9940e3-4993-4c31-bbf8-e6218cf3239b.52f1ef74-e53c-416c-81c6-7746e97d305c?mode=scale&q=90&h=1080&w=1920'),
@@ -60,24 +63,27 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
-              final String value = controller.text;
-              final double? doubleValue = double.tryParse(value);
+          Container(
+            margin: EdgeInsetsDirectional.fromSTEB(150, 0, 150, 0),
+            child: ElevatedButton(
+              onPressed: () {
+                final String value = controller.text;
+                final double? doubleValue = double.tryParse(value);
 
-              setState(() {
-                if (doubleValue == null) {
-                  errorText = 'please enter a number';
-                  resultText = '';
-                } else {
-                  errorText = null;
+                setState(() {
+                  if (doubleValue == null) {
+                    errorText = 'please enter a number';
+                    resultText = '';
+                  } else {
+                    errorText = null;
 
-                  final result = doubleValue * 4.95;
-                  resultText = '${result.toStringAsFixed(2)}';
-                }
-              });
-            },
-            child: Text('Convert!'),
+                    final result = doubleValue * 4.95;
+                    resultText = '${result.toStringAsFixed(2)}';
+                  }
+                });
+              },
+              child: Text('Convert!'),
+            ),
           ),
           Text(
             resultText,
