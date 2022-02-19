@@ -24,6 +24,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final double valueEuro = 4.95;
   final TextEditingController controller = TextEditingController();
   String? errorText;
   String resultText = '';
@@ -67,8 +68,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsetsDirectional.fromSTEB(150, 0, 150, 0),
+          Center(
             child: ElevatedButton(
               onPressed: () {
                 final String value = controller.text;
@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   } else {
                     errorText = null;
 
-                    final result = doubleValue * 4.95;
+                    final result = doubleValue * valueEuro;
                     resultText = '${result.toStringAsFixed(2)}';
                   }
                 });
@@ -89,9 +89,11 @@ class _HomePageState extends State<HomePage> {
               child: Text('Convert!'),
             ),
           ),
-          Text(
-            resultText,
-            style: TextStyle(fontSize: 30),
+          Center(
+            child: Text(
+              resultText,
+              style: TextStyle(fontSize: 30),
+            ),
           ),
         ],
       ),
