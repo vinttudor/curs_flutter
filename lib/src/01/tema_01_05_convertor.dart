@@ -36,7 +36,11 @@ class _HomePageState extends State<HomePage> {
       Nu stiu daca e cea mai corecta si eleganta metoda de rezolvare.
       Eventual, astept o parere.
 
-      Daaaaar, intre timp am aflat din cursul 3 ca daca folosesc in loc de Column, ListView si ii pun EdgeInsetsDirectional rezolv problema :)
+
+      Daaaaar, intre timp am aflat din cursul 3 :D :
+       - pt ca Column si Row se randeaza la infinit apare overflow
+       - ListView creeaza scroll si rezolva pb
+
        */
       //resizeToAvoidBottomInset: false,
 
