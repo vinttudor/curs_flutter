@@ -1,4 +1,6 @@
 // ignore_for_file: file_names
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,33 +27,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<int> values = List.generate(100, (int index) => index);
+  int number = 3;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      // body: SingleChildScrollView(
-      //   child: Column(
-      //     children: values.map((int value) {
-      //       return Text('$value');
-      //     }).toList(),
-      //   ),
-      // ),
-
-      // body: ListView(
-      //   children: values.map((int value) {
-      //     return Text('$value');
-      //   }).toList(),
-      // ),
-
-      body: ListView.builder(
-        itemCount: values.length,
-        itemBuilder: (BuildContext context, int index) {
-          final value = values[index];
-
-          return Text('$value');
-        },
+      body: Column(
+        children: <Widget>[
+          Text('$number'),
+          TextButton(
+            onPressed: () {
+              setState(() {
+                number = Random().nextInt(99) + 1;
+              });
+            },
+            child: Text('Press me'),
+          )
+        ],
       ),
     );
   }
