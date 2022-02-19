@@ -38,8 +38,8 @@ class _HomePageState extends State<HomePage> {
       Eventual, astept o parere.
 
 
-      Daaaaar, intre timp am aflat din cursul 3 :D :
-       - pt ca Column si Row se randeaza la infinit apare overflow
+      Daaaaar, intre timp am aflat din cursul 3 ca: :D
+       - pt ca Row si Column se randeaza la infinit apare overflow
        - ListView creeaza scroll si rezolva pb
 
        */
