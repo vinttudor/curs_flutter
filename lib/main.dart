@@ -8,7 +8,11 @@
 //import 'src/02/02.dart' as app;
 //import 'src/02/03.dart' as app;
 //import 'src/02/04.dart' as app;
-import 'src/02/tema_02_04_guess_number.dart' as app;
+//import 'src/02/tema_02_04_guess_number.dart' as app;
+//import 'src/03/01.dart' as app;
+//import 'src/03/03.dart' as app;
+//import 'src/03/04.dart' as app;
+import 'src/03/tema_03_04_number_shapes.dart' as app;
 
 void main() {
   app.main();
