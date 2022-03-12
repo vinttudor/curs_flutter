@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2 # checkout la cod
       - uses: subosito/flutter-action@v2 # install pt flutter
         with:
-          flutter-version: 'stable'
+          channel: 'stable'
       - name: Run format
         run: flutter format -l 120 --set-exit-if-changed .
       - name: Run analysis
