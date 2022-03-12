@@ -1,6 +1,8 @@
 name: Check my code quality
 on:
   push:
+    #paths:
+      #- currency_convertor/** #doar in interiroul proiectului ruleaza
 
 jobs:
   quality_check:
