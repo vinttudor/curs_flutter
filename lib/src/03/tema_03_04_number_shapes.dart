@@ -14,7 +14,7 @@ class FlutterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: HomePage(),
     );
   }
@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text('Number Shapes'),
         ),
       ),
@@ -48,10 +48,10 @@ class _HomePageState extends State<HomePage> {
               ),
               textAlign: TextAlign.left,
             ),
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
           ),
           Container(
-            margin: EdgeInsetsDirectional.only(
+            margin: const EdgeInsetsDirectional.only(
               start: 22.0,
               end: 22.0,
             ),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.check),
-        onPressed: () {
+        onPressed: () async {
           if (numberController.text != '') {
             int number = numberController.text.isEmpty ? 0 : int.parse(numberController.text);
             double sqrtValue = sqrt(number);
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
               }
             }
 
-            showDialog(
+            await showDialog(
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
@@ -107,9 +107,15 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             );
+            setState(() {
+              numberController.clear();
+            });
           }
         },
       ),
     );
   }
 }
+
+// de optimizat candva:
+// sa mai mut din cod in functii

@@ -224,3 +224,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+// de optimizat candva:
+// unele chestii se duplica pe aici si ar trebui pus codul repetat in functii, la fel si codul cu dialogul
