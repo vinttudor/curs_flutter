@@ -29,7 +29,6 @@ class _HomePageState extends State<HomePage> {
 
   String? errorText;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,8 +67,7 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
             icon: Icon(Icons.home),
-            onPressed: () {
-            },
+            onPressed: () {},
           )
         ],
       ),

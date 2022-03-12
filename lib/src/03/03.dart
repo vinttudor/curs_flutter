@@ -56,8 +56,6 @@ class Dog extends Animal implements Piano, Guitar {
   const Dog.base() : legsCount = 4; //named
   //Dog(this._legsCount);
 
-
-
   //int _legsCount;
 
   @override

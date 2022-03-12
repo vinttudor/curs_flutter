@@ -12,7 +12,6 @@ void main() {
 
   print(squareMeterPrice);
 
-
   testFunction('name', 10);
   testFunction2('name');
   testFunction3(age: 24, name: 'Razvan');
@@ -31,9 +30,8 @@ class House {
   //bool _hasGarage; _ create private property, protected doesn't exist in dart
   double area;
 
-
   double calculatePrice() {
-    return area * squareMeterPrice +  roomNumber * roomNumberPrice;
+    return area * squareMeterPrice + roomNumber * roomNumberPrice;
   }
 }
 

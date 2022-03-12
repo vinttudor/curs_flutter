@@ -149,18 +149,14 @@ class _HomePageState extends State<HomePage> {
                           containerResultBottom = 0.0;
                         } else {
                           int numberController =
-                              tryNumbercontroller.text.isEmpty
-                                  ? 0
-                                  : int.parse(tryNumbercontroller.text);
+                              tryNumbercontroller.text.isEmpty ? 0 : int.parse(tryNumbercontroller.text);
                           containerResultTop = 5.0;
                           containerResultBottom = 5.0;
                           if (numberController < number) {
-                            containerResultTextLine1 =
-                                'You tried $numberController';
+                            containerResultTextLine1 = 'You tried $numberController';
                             containerResultTextLine2 = 'Try higher';
                           } else if (numberController > number) {
-                            containerResultTextLine1 =
-                                'You tried $numberController';
+                            containerResultTextLine1 = 'You tried $numberController';
                             containerResultTextLine2 = 'Try lower';
                           } else {
                             showDialog(

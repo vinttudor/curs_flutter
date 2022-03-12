@@ -13,8 +13,7 @@ void main() {
   if (isAwesome) {
     print('good');
   } else {
-    print(
-        'not good'); // nu se ruleaza niciodata datorita lui isAwesome constante
+    print('not good'); // nu se ruleaza niciodata datorita lui isAwesome constante
   }
 
   String name = 'Big Boss';
@@ -51,8 +50,8 @@ void main() {
   print(data);
 
   final Set<String> data2 = ints //
-    .map((int value) => '$value ani')
-    .toSet();
+      .map((int value) => '$value ani')
+      .toSet();
   print(data2);
 
   final List<List<int>> ints2 = [
@@ -60,18 +59,14 @@ void main() {
     [5, 6, 7, 8]
   ];
   final data3 = ints2 //
-    .expand((List<int> value) => value)
-    .map((int value) => '$value ani')
-    .toList();
+      .expand((List<int> value) => value)
+      .map((int value) => '$value ani')
+      .toList();
   print(data3);
 
-
   final data4 = ['Catalin', 'Adi', 'Razvan'];
-  final data5 = data4
-    .expand((String value) => ['a', 'b', 'c', value])
-    .toList();
+  final data5 = data4.expand((String value) => ['a', 'b', 'c', value]).toList();
   print(data5);
-
 
   final isThere = data5.contains('Razvan');
   print(isThere);

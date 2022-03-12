@@ -13,9 +13,7 @@ class House {
   //bool _hasGarage; _ create private property, protected doesn't exist in dart
   double area;
 
-
   double calculatePrice() {
-    return area * squareMeterPrice +  roomNumber * roomNumberPrice;
+    return area * squareMeterPrice + roomNumber * roomNumberPrice;
   }
 }
-

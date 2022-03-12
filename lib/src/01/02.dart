@@ -13,7 +13,8 @@ class FlutterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //return WidgetsApp( //peste android si ios
     //return CupertinoApp( //pentro ios
-    return MaterialApp( //pentru android
+    return MaterialApp(
+      //pentru android
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green,
@@ -22,7 +23,7 @@ class FlutterApp extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.arrow_back),
           ),
-          actions: <Widget> [
+          actions: <Widget>[
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.star),

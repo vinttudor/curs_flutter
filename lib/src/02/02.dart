@@ -28,15 +28,7 @@ class _HomePageState extends State<HomePage> {
   int? index = null;
 
   final List<int> values = <int>[0, 5, 2, 3, 6, 7, 8];
-  final List<String> texts = <String>[
-    'Andrei',
-    'Dani',
-    'Cosmin',
-    'Petru',
-    'Mihai',
-    'Matei',
-    'Victor'
-  ];
+  final List<String> texts = <String>['Andrei', 'Dani', 'Cosmin', 'Petru', 'Mihai', 'Matei', 'Victor'];
 
   @override
   Widget build(BuildContext context) {
